@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
     'dev-ops-beta.vercel.app',
     'dev-iy6h75g51-nael-s-projects1.vercel.app',
     'dev-57jgqonjj-nael-s-projects1.vercel.app',
+    'dev-ops-git-develop-nael-s-projects1.vercel.app',
 ]
 
 
