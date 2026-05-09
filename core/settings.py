@@ -26,6 +26,9 @@ SECRET_KEY = 'django-insecure-yh-#o2qo16spu-r-z(x@1qry@3dtnha%7xm)7hfck-43pys9*^
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'melodious-trust-production.up.railway.app',
     'dev-ops-beta.vercel.app',
     'dev-iy6h75g51-nael-s-projects1.vercel.app',
     'dev-57jgqonjj-nael-s-projects1.vercel.app',
