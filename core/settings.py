@@ -11,6 +11,23 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import sentry_sdk
+
+from sentry_sdk.integrations.django import DjangoIntegration
+
+ 
+
+sentry_sdk.init(
+
+    dsn="https://1825d32f45f94e2b6b9689376fcf795c@o4511362277572609.ingest.de.sentry.io/4511362285568080",  # Remplacez par le DSN copié depuis Sentry
+
+    integrations=[DjangoIntegration()],
+
+    traces_sample_rate=1.0,  # Ajustez le taux de collecte des traces
+
+    send_default_pii=True
+
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +42,15 @@ SECRET_KEY = 'django-insecure-yh-#o2qo16spu-r-z(x@1qry@3dtnha%7xm)7hfck-43pys9*^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dev-ops-beta.vercel.app','dev-iy6h75g51-nael-s-projects1.vercel.app' ]
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'melodious-trust-production.up.railway.app',
+    'dev-ops-beta.vercel.app',
+    'dev-iy6h75g51-nael-s-projects1.vercel.app',
+    'dev-57jgqonjj-nael-s-projects1.vercel.app',
+    'dev-ops-git-develop-nael-s-projects1.vercel.app',
+]
 
 
 # Application definition
@@ -122,3 +147,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
