@@ -21,7 +21,7 @@ from django.urls import path
 
 from portal.views import home
 
-f
+
 
  
 
